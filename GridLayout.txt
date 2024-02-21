@@ -1,0 +1,39 @@
+
+<GridLayoutExample@GridLayout>:
+    rows:2
+    cols:3
+    Button:
+        text:'A'
+        size_hint:.5,1
+    BoxLayout:
+        size_hint: .20,.20
+
+        Button:
+            text:'A'
+
+
+        Button:
+            text:'B'
+    Button:
+        text:'c'
+
+    BoxLayout:
+        orientation : 'horizontal'
+        spacing : '10dp'
+        Button:
+            text : 'B1'
+        Button:
+            text : 'B2'
+        Button:
+            text : 'B3'
+        Button:
+            text : 'B4'
+    Button:
+        text:'d'
+        size_hint:.5,1
+    Button:
+        text:'e'
+
+    Button:
+        text:'f'
+

@@ -1,0 +1,16 @@
+AnchorLayoutExample:
+
+<AnchorLayoutExample>:
+    #right,left,center
+    anchor_x:'left'
+    #bottom ,top,center
+    anchor_y:'top'
+    BoxLayout:
+        size_hint: .20,.20
+
+        Button:
+            text:'A'
+
+
+        Button:
+            text:'B'

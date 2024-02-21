@@ -1,0 +1,55 @@
+BoxLayoutExample:
+
+BoxLayoutExample:
+
+
+<BoxLayoutExample>:
+    orientation : 'vertical'
+    spacing : '10dp'
+    Button:
+        text : 'A'
+        size_hint: .5,None
+        #width : "100dp"
+        height : "60dp"
+        # x,center_x,right
+        # y,center_y,top
+        #pos_hint:{'x':.5,}
+        #pos_hint:{'right':.5,}
+        pos_hint:{'center_x':.5,}
+    BoxLayout:
+        orientation : 'horizontal'
+        spacing : '10dp'
+        Button:
+            text : 'B1'
+        Button:
+            text : 'B2'
+        Button:
+            text : 'B3'
+        Button:
+            text : 'B4'
+
+    Label:
+        text : 'C'
+
+
+
+
+
+
+
+from kivy.app import App
+from kivy.uix.widget import Widget
+from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.button import Button
+
+
+class BoxLayoutExample(BoxLayout):
+    # def __init__(self, **kwargs):
+    #     super().__init__(**kwargs)
+    #     self.orientation = 'vertical'
+    #     b1 = Button(text="A")
+    #     b2 = Button(text="B")
+    #     b3 = Button(text="B")
+    #     self.add_widget(b1)
+    #     self.add_widget(b2)
+    #     self.add_widget(b3)
