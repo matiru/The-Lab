@@ -1,0 +1,38 @@
+from kivy.uix.stacklayout import StackLayout
+from kivy.metrics import dp
+
+
+class StackLayoutExample(StackLayout):
+    def __init__(self,**kwargs):
+        super().__init__(**kwargs)
+        self.orientation = 'lr-bt'
+        for i in range(0,10):
+            size = dp(100)
+            b = Button(text=str(i+1), size_hint=(None,None), size =(size,size))
+            self.add_widget(b)
+
+
+<StackLayoutExample>:
+    #left-right top-bottom
+    orientation:"rl-bt"
+
+
+<StackLayoutExample>:
+    Button:
+        text:'A'
+        size_hint: .2,.2
+    Button:
+        text:'B'
+        size_hint: .2,.2
+    Button:
+        text:'C'
+        size_hint: .2,.2
+    Button:
+        text:'d'
+        size_hint: .2,.2
+    Button:
+        text:'e'
+        size_hint: .2,.2
+    Button:
+        text:'f'
+        size_hint: .2,.2
