@@ -1,10 +1,48 @@
-PageLayoutExample:
+WidgetsExample:
 
-<PageLayoutExample@PageLayout>:
-    MainWidget:
-    BoxLayoutExample:
-    AnchorLayoutExample:
-    GridLayoutExample:
+<GridLayout>:
+    cols : 3
+    ToggleButton:
+        text: 'off'
+        on_state: root.on_toggle_button_state(self)
+        size_hint : None, 1
+        width : '100dp'
+    Button :
+        text:"Count"
+        on_press: root.on_button_click()
+        disabled: not root.count_enabled
+    Label :
+        text : root.my_text
+        font_name :'fonts/Lcd.ttf'
+        font_size: '80dp'
+        color: .7 ,.2 ,.4
+    Switch:
+        id : my_switch
+        on_active: root.on_switch_active(self)
+        size_hint : None, 1
+        width : '100dp'
+        active : True
+
+    Slider:
+        id: my_slider
+        min:0
+        max:100
+        value:50
+        on_value : root.on_slider_value(self)
+        orientation:'vertical'
+        disabled : not my_switch.active
+    Label :
+        text : str(int(my_slider.value))
+        font_name :'fonts/Lcd.ttf'
+        font_size: '50dp'
+        color: .5 ,.8 ,1
+
+
+
+
+
+
+
 
 
 <ScrollViewExample@ScrollView>:
